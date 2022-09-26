@@ -1,0 +1,325 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Condensed', sans-serif;
+    overflow-x: hidden;
+    background: #e8a177;
+    /* background:lightskyblue; */
+    transition: 2s ease-in;
+}
+
+header{
+    padding: 0 85px;
+   
+}
+.logo {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    /* animation: logo-img 2.5s; */
+}
+@keyframes logo-img{
+    from {
+        transform: translateY(-400%);
+    }
+}
+.logo img{
+    width: 100%;
+}
+.moon-bg {
+   margin-bottom: -10px;
+   border: 1px solid white;
+   cursor: pointer;
+}
+.header-inner{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 35px;
+    /* animation: logo-img 2s; */
+}
+nav ul li:last-child{
+    padding-right: 0;
+}
+/* nav ul li  */
+a{
+    position: relative;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(120, 116, 122);
+    font-size: 20px;
+    transition: all ease 0.5s;
+}
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    top: -22px;
+    right: 50%;
+    background: url(images/circle.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 75px;
+    height: 75px;
+    opacity: 0;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+nav ul li a:hover:before{
+    opacity: 1;
+    transform: rotate(360deg);
+    transition: ease 1.5s;
+}
+nav ul li a:hover{
+    color: rgba(128, 0, 128, 0.76);
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 85px;
+    color:black;
+    overflow: hidden;
+    position: relative;
+    /* animation: content-effect 3s; */
+    
+}
+.content h1{
+    font-size: 62px;
+    line-height: 72px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+.content p{
+    font-size: 18px;
+    line-height: 32px;
+    font-family: 'Popping', sans-serif;
+} 
+@keyframes content-effect {
+    from {
+        transform: translateX(-300%);
+    }
+}
+
+.banner-img img {
+    /* animation: img-apple 6s; */
+}
+
+@keyframes img-apple {
+    from {
+        transform: translateX(500%);
+    }
+} 
+.content .text{
+    max-width: 700px;
+}
+.content .img{
+    position: relative;
+    z-index: 9;
+}
+.content .banner-img{
+    margin-right: -30px;
+    margin-top: 45px;
+}
+.content .circular-text img{
+    position: absolute;
+    top: 0;
+    right: 60px;
+    z-index: 99;
+    animation: circularText 5s linear infinite;
+}
+@keyframes circularText {
+    
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.products{
+    max-width: 63%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 5%;
+    
+}
+.products .card{
+    width: 285px;
+    height: 300px;
+    border-radius: 16px;
+    margin: 10px;
+    box-shadow: 0 10px 50px rgb(0,0,0,0.5);
+    background-color: #fff;
+    text-align: center;
+    /* animation: card-1 4s; */
+}
+@keyframes card-1{
+    from {
+        transform: translateY(300%);
+    }
+}
+.products .card1{
+    width: 285px;
+    height: 300px;
+    border-radius: 16px;
+    margin: 10px;
+    box-shadow: 0 10px 50px rgb(0,0,0,0.5);
+    background-color: #fff;
+    text-align: center;
+    /* animation: card-2 5s; */
+}
+@keyframes card-2{
+    from {
+        transform: translateY(300%);
+    }
+}
+.products .card2{
+    width: 285px;
+    height: 300px;
+    border-radius: 16px;
+    margin: 10px;
+    box-shadow: 0 10px 50px rgb(0,0,0,0.5);
+    background-color: #fff;
+    text-align: center;
+    /* animation: card-3 6s; */
+}
+@keyframes card-3{
+    from {
+        transform: translateY(300%);
+    }
+}
+.products .img{
+    margin-top: -130px;
+    position: relative;
+    transition: all ease 0.5s;
+}
+.products .img1{
+    margin-top: -130px;
+    position: relative;
+    margin-bottom: 35px;
+    transition: all ease 0.5s;
+}
+.products .img2{
+    margin-top: -140px;
+    position: relative;
+    transition: all ease 0.5s;
+}
+/* .products .img:before,.products .img1:before,.products .img2:before{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 107px;
+    height: 14px;
+    background-color: #000;
+    border-radius: 100%;
+    filter: blur(23px);
+} */
+.products .img:hover{
+    transform: translateY(-35px);
+}
+.products .img1:hover{
+    transform: translateY(-35px);
+}
+.products .img2:hover{
+    transform: translateY(-35px);
+}
+.products h6{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #e8a177;
+    margin-bottom: 5px;
+}
+.products h4{
+    font-size: 24px;
+    font-weight: 700;
+}
+.products a{
+    display: inline-block;
+    min-width: 140px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e8a177;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    box-shadow: 0 20px 40px rgba(187,98,45,0.4);
+    transform: translateY(25px);
+    transition: all ease 0.5s;
+}
+.products a:hover{
+    background-color: #fff;
+    border-color: #e8a177;
+    color: #e8a177;
+    box-shadow: none;
+    transform: translateY(20px);
+}
+
+
+/* ************************** Dark mode css *************************** */
+
+.body-bg {
+    background: black;
+    transition: all 2s ease-out;
+}
+
+.logo-text {
+    color: grey;
+    transition: all 2s ease-out;
+}
+
+.hand-poistion {
+    margin-right: 10px;
+    transition: all 2s ease-out;
+}
+
+.text-effect {
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -text-fill-color:transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color :transparent;
+    display: inline-block;
+    animation: textclip 3s linear infinite;
+    
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.col-white {
+    color:white;
+    transition: all 2s ease-out;
+}
+
+
+
